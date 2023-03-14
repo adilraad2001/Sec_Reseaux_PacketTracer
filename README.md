@@ -151,6 +151,31 @@ And to add an IP address to the computer, you must:
 
 *we will discuss the practical exercises we completed to apply an access list in a network using Packet Tracer. An access list is a set of rules that determines which network traffic is allowed or denied based on specific criteria, such as the source and destination IP addresses, ports, or protocols. By applying an access list, we can control the flow of network traffic and improve network security.*
 
+- In order to show how they work and how to use them, we will do some scenarios:
+
+1- Allow packets sent from machine 200.4.1.2 and deny from machine 200.4.1.3 go to network 200.4.3.0:
+
+- for this we need to create a access-list for deny any packet come from the machine 200.4.1.3 into 200.4.3.0 and let any other packets to pass
+
+![TP1-22](https://user-images.githubusercontent.com/99618982/225116339-b0c520cf-78d0-4ee2-9c18-83a4f0297661.png)
+
+- as u can see block the packet of 200.4.1.3 into 200.4.3.0 and allow the others , Let's check!
+
+ PC0
+ 
+![TP1-23](https://user-images.githubusercontent.com/99618982/225116549-8414c888-9156-4496-b78a-3a7cf765ab34.png)
+
+PC1 
+
+![TP1-24](https://user-images.githubusercontent.com/99618982/225116620-6c1c83da-0332-48bc-8385-04c2aee59543.png)
+
+-its's work
+
+2- Reject packets coming from machine 200.4.3.3 and go to 200.4.2.0 and 200.4.1.0:
+
+- for do this 
+
+
 
 
 
