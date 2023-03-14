@@ -34,7 +34,8 @@ Realisé Par : Adil Erraad
    
    2. *Outils logiciels :*
    >
-   > Cisco Packet Tracer
+   > Cisco Packet Tracer => 7*PC=> PC0=200.4.1.2,PC1=200.4.1.3,PC2=200.4.2.2,PC3=200.4.2.3,PC4=200.4.3.2,PC5=200.4.3.3,PC6=200.4.4.2,PC7=200.4.4.3
+   > 3*Routers=>R1=200.4.1.1/200.4.2.1/200.4.5.1,R2=200.4.5.2/200.4.3.1/200.4.6.1,R3=200.4.6.2/200.4.4.1
    >
    
 ### 2. Network Topology:
@@ -173,14 +174,35 @@ PC1
 
 2- Reject packets coming from machine 200.4.3.3 and go to 200.4.2.0 and 200.4.1.0:
 
-- for do this 
+- for do this we need to block any packet come from the machine 200.4.3.3 and allow from 200.4.3.2
+
+![2023-03-14 21_06_10-R1](https://user-images.githubusercontent.com/99618982/225124220-4e70b0ae-df22-41e5-a7af-6ecddd13f23f.jpg)
+
+![2023-03-14 21_18_35-R1](https://user-images.githubusercontent.com/99618982/225126648-a47d55f9-1539-407b-80c7-bc8bcf790338.jpg)
+
+- For check send a icmp traffic from 200.4.3.3 to:
+
+PC5:200.4.3.3
+
+![2023-03-14 21_14_02-PC5](https://user-images.githubusercontent.com/99618982/225125735-479f56c2-9f2e-4073-8828-b6ad8561ab25.jpg)
+
+PC4:200.4.3.2
+
+![2023-03-14 21_14_02-PC5](https://user-images.githubusercontent.com/99618982/225126546-06b28742-787c-42a2-aa44-a169649427dd.jpg)
+
+3- Reject packets from network 200.4.4.0 and go to network 200.4.3.0:
+
+- we can do this by block the packets came from 200.4.4.0 to 200.4.3.0 and allow the others network
+
+![2023-03-14 21_37_35-R2](https://user-images.githubusercontent.com/99618982/225130650-5ec3dbbb-42d8-4d96-b2dd-6739e0372a49.jpg)
+
+- Test with succesful
+
+![2023-03-14 21_36_53-PC3](https://user-images.githubusercontent.com/99618982/225130548-3a969d1b-3d7f-4784-9d89-bfdc99918b3d.jpg)
 
 
+### 4. Conclusion:
 
+In this TP, you created a network topology in Packet Tracer consisting of three routers and seven PCs. You configured the IP addresses of each device and added static routes on Router1 and Router2 and Router3 to route traffic between the networks.
 
-
-
-
-
-
-
+Overall, by creating and configuring this network topology in Packet Tracer and applying access lists, you were able to control and manage the traffic flow between the networks. This exercise helped you develop a better understanding of how to design and configure networks with multiple routers and access lists to achieve specific goals to make it more secure.
